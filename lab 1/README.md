@@ -19,6 +19,8 @@ Anaconda3(64-bit)
 
 上述大部分工具在Anaconda中无需再次安装。如果有哪个工具包（假设叫`X`）需要安装，就直接在Anaconda的.ipynb文件中打开一个新的cell，在里面执行`!pip install X`即可。
 
+或者也可以执行`pip install -r requirements.txt`来安装这些包。
+
 ## 代码执行方法
 所有代码都写在`./lab1_main.ipynb`文件中，打开文件从上至下执行每个cell即可。
 
