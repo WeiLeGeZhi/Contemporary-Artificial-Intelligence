@@ -8,6 +8,7 @@ Python 3.10
 **需要安装的工具包有：**
 - `queue`
 - `sys`
+
 如果有哪个工具包（假设叫`X`）需要安装，就同时按`Win`+`R`，选择`cmd`，在 Window shell 里面执
 行`!pip install X`即可,或者执行`pip install -r requirements.txt`来安装这些包。
 
