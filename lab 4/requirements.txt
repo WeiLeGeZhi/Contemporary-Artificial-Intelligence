@@ -1,0 +1,7 @@
+matplotlib==3.8.2
+numpy==1.26.2
+pandas==2.1.4
+rouge_score==0.1.2
+tensorflow==2.15.0
+tensorflow_intel==2.15.0
+torch==2.1.0
