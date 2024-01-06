@@ -118,8 +118,7 @@ if __name__ == '__main__':
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=1e-3)
 
-    # Training loop
-    num_epochs = 2
+    num_epochs = 10
     for epoch in range(num_epochs):
         model.train()
 
@@ -132,19 +131,16 @@ if __name__ == '__main__':
             optimizer.step()
 
         val_loss, accuracy, val_preds = test_acc(model, valid_loader, 0, False)
-        # print(val_preds)
         print(f'Epoch {epoch + 1}/{num_epochs}, Training Loss: {loss.item()}, Validation Loss: {val_loss.item()}, Accuracy: {accuracy}')
 
     txt_only_loss, txt_only_accuracy, txt_only_preds = test_acc(model, valid_loader, 1, False)
     print(
         f'Text Only Loss: {txt_only_loss.item()}, Accuracy: {txt_only_accuracy}')
-    print(txt_only_preds)
     img_only_loss, img_only_accuracy, img_only_preds = test_acc(model, valid_loader, 2, False)
     print(
         f'Image Only Loss: {img_only_loss.item()}, Accuracy: {img_only_accuracy}')
 
     test_loss, test_accuracy, test_preds = test_acc(model, test_loader, 0, True)
-    # print(test_preds)
     test['tag'] = label_encoder.inverse_transform(test_preds)
     columns_to_save = ['guid', 'tag']
     test[columns_to_save].to_csv('test_without_label.txt', index=False, header=True, sep=',')
