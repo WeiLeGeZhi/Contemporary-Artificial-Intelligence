@@ -24,6 +24,7 @@
 ├───.idea
 │   └───inspectionProfiles
 ├───.ipynb_checkpoints
+├───10205501432_温兆和_当代人工智能实验报告5
 ├───data
 ├───model
 │   └───__pycache__
